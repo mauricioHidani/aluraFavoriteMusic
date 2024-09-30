@@ -22,6 +22,10 @@ public class Audio implements Serializable {
 		this.classificacao = classificacao;
 	}
 
+	public static AudioBuilder builder() {
+		return new AudioBuilder();
+	}
+
 	public UUID getId() {
 		return id;
 	}
@@ -48,6 +52,38 @@ public class Audio implements Serializable {
 
 	public void reproduz() {
 		this.totalReproducoes++;
+	}
+
+	public static class AudioBuilder {
+		private String titulo;
+		private Integer totalReproducoes;
+		private Integer totalCurtidas;
+		private Integer classificacao;
+
+		public AudioBuilder titulo(String titulo) {
+			this.titulo = titulo;
+			return this;
+		}
+
+		public AudioBuilder totalReproducoes(Integer totalReproducoes) {
+			this.totalReproducoes = totalReproducoes;
+			return this;
+		}
+
+		public AudioBuilder totalCurtidas(Integer totalCurtidas) {
+			this.totalCurtidas = totalCurtidas;
+			return this;
+		}
+
+		public AudioBuilder classificacao(Integer classificacao) {
+			this.classificacao = classificacao;
+			return this;
+		}
+
+
+		public Audio build() {
+			return new Audio(titulo, totalReproducoes, totalCurtidas, classificacao);
+		}
 	}
 
 }
