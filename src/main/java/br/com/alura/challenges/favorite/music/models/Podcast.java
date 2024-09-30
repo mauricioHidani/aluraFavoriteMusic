@@ -27,6 +27,17 @@ public class Podcast extends Audio implements Serializable {
 		return new PodcastBuilder();
 	}
 
+	@Override
+	public Integer verifClassificacao() {
+		if (getTotalReproducoes() > 500) {
+			setClassificacao(10);
+		}
+		else {
+			setClassificacao(7);
+		}
+		return getClassificacao();
+	}
+
 	public String getApresentador() {
 		return apresentador;
 	}
@@ -74,7 +85,18 @@ public class Podcast extends Audio implements Serializable {
 		}
 
 		public Podcast build() {
-			return new Podcast(titulo, totalReproducoes, totalCurtidas, classificacao, apresentador, descricao);
+			totalReproducoes = totalReproducoes == null ? 0 : totalReproducoes;
+			totalCurtidas = totalCurtidas == null ? 0 : totalCurtidas;
+			classificacao = classificacao == null ? 0 : classificacao;
+
+			return new Podcast(
+					titulo,
+					totalReproducoes,
+					totalCurtidas,
+					classificacao,
+					apresentador,
+					descricao
+			);
 		}
 	}
 

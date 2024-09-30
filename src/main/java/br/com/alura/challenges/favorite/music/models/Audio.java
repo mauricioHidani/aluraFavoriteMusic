@@ -44,6 +44,10 @@ public class Audio implements Serializable, IAudioService {
 		return classificacao;
 	}
 
+	public Integer verifClassificacao() {
+		return classificacao;
+	}
+
 	protected void setClassificacao(Integer value) {
 		classificacao = value;
 	}
