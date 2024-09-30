@@ -30,6 +30,17 @@ public class Musica extends Audio implements Serializable {
 		return new MusicaBuilder();
 	}
 
+	@Override
+	public Integer verifClassificacao() {
+		if (getTotalReproducoes() > 2000) {
+			setClassificacao(10);
+		}
+		else {
+			setClassificacao(8);
+		}
+		return getClassificacao();
+	}
+
 	public String getAlbum() {
 		return album;
 	}
@@ -88,6 +99,10 @@ public class Musica extends Audio implements Serializable {
 
 
 		public Musica build() {
+			totalReproducoes = totalReproducoes == null ? 0 : totalReproducoes;
+			totalCurtidas = totalCurtidas == null ? 0 : totalCurtidas;
+			classificacao = classificacao == null ? 0 : classificacao;
+
 			return new Musica(
 				titulo,
 				totalReproducoes,
