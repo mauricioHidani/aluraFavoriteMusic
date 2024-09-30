@@ -3,6 +3,8 @@
 📅 30 de setembro de 2024 - 📍São Paulo, Brasil<br>
 🌎 [@Alura](https://www.alura.com.br/) | [@One](https://www.oracle.com/br/)<br>
 
+![225426397-327dc314-7e00-4ed7-8875-e68d0317e995](https://github.com/user-attachments/assets/b3433ed0-1a5b-4efd-8f08-12bf84244246)
+
 ## Versões
 - [Java 21](https://docs.oracle.com/en/java/javase/21/)
 - [Maven](https://maven.apache.org/what-is-maven.html)
@@ -12,6 +14,7 @@
 modelando as classes utilizando os conceitos de orientação a objetos: abstração, herança, 
 encapsulamento e polimorfismo.
 
+**repositório do desafio:** [https://github.com/alura-cursos/2887-java-desafio/tree/main](https://github.com/alura-cursos/2887-java-desafio/tree/main)
 ### Requisitos
 - Criar uma classe Audio com os atributos (titulo, totalReproducoes, totalCurtidas e classificacao).
 - Utilizar encapsulamento, deixando os atributos privados e criando os getters e setters para acessar e modificar os atributos.
