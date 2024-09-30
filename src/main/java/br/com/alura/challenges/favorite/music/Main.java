@@ -30,7 +30,7 @@ public class Main {
 		.build();
 
 		System.out.println("""
-			Desafio Alura - Aula (Java: Aplicando a Orientação a Obsejtos
+			Desafio Alura - Aula (Java: Aplicando a Orientação a Obsejtos)
 			Músicas Preferidas
 			ONE G7
 			"""
